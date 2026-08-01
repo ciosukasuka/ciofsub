@@ -1,6 +1,5 @@
-import os
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+import asyncio
+from pyrogram import Client, filters, idle
 from config import API_ID, API_HASH, BOT_TOKEN, CHANNEL_ID, LOG_CHANNEL, ADMINS
 
 Bot = Client(
@@ -19,7 +18,6 @@ async def start(client, message):
 
 async def main():
     await Bot.start()
-    # Test kirim ke log channel biar tau bot hidup
     try:
         await Bot.send_message(LOG_CHANNEL, "Bot: Fsub Started successfully ✅")
     except Exception as e:
@@ -29,5 +27,5 @@ async def main():
     await idle()
     await Bot.stop()
 
-from pyrogram import idle
-Bot.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())  # <- INI KUNCINYA. Ganti asyncio.get_event_loop()
