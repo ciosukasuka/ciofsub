@@ -10,7 +10,15 @@ Bot Telegram Fsub sederhana untuk Heroku. Wajib join channel dulu baru bisa akse
 
 ## 2. Deploy ke Heroku 1-Klik
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy]<!DOCTYPE html>
+<html>
+  <div class="center-content">
+    <a
+    href="https://heroku.com/deploy?template=https://github.com/ciosukasuka/ciofsub">
+      <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+    </a>
+  </div>
+</html>
 
 ## 3. Deploy Manual
 
